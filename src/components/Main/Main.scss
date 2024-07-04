@@ -1,0 +1,50 @@
+@import "../../sass/variables";
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .card {
+        background-color:$cardNavbarcolor;
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: 7px;
+        overflow: hidden;
+        position: relative;
+        &:hover .card-over {
+            //we need the cardover to go all the way up 
+            transform: translateY(0%);
+          }
+          .title {
+            color:$backgroundcolor;
+            padding: 1rem;
+            font-size: 1.5rem;
+          }
+      }
+      img {
+        width: 500px;
+        height: 350px;
+        object-fit: cover;
+        transition: transform 0.7s ease-in-out;
+        &:hover {
+            filter: grayscale(100%);
+            transform: scale(1.2);// to make it like zoom 
+          }
+      }
+      .wrapper {
+        overflow: hidden; //divimg 
+      }
+      .card-over {
+        color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.7); //to make 
+        font-size: 1.5rem;
+         //a whole height down which is below the card ,thats why we set the overflow to hidden
+        transform: translateY(100%);  /* the whole height down  */
+        z-index: 1;//to make sure that it is over the card
+        transition: transform 0.7s ease-in-out;
+    }
+  }
+  

@@ -1,0 +1,11 @@
+//we need import the font, we have 2 fonts:from google font ,import not from Link
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Hubballi&display=swap');
+//we need import allscss files
+@import "./sass/reset","./sass/variables","./sass/mixins";
+body{
+  background-color:$backgroundcolor ;
+  font-family: "Amatic SC", sans-serif;
+}
+p{
+  font-family: "Hubballi", sans-serif;
+}

@@ -1,0 +1,31 @@
+@import "../../sass/variables","../../sass/mixins";
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    background-color: $cardNavbarcolor;
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 2rem;
+        padding: 1rem;
+        &:hover{
+            color:$cardNavbarcolor ;
+            background-color:$backgroundcolor ;
+        }
+    }
+}
+//0 to 576px
+@include media-xsm{
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+// from 576 till 1600px
+@include media-sm{
+    .navbar{
+        flex-direction: row;
+       
+    }
+}
